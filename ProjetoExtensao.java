@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+estou meio triste confesso que queria que fosse ao vivasso 
 package br.edu.ifpr.irati.modelo;
 
 import java.io.Serializable;
