@@ -5,7 +5,6 @@
  */
 package br.edu.ifpr.irati.modelo;
 
-Vamo que vamo
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
