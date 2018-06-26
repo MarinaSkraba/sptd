@@ -13,6 +13,9 @@
         <property name="hibernate.connection.password"></property>
         <mapping class="br.edu.ifpr.irati.modelo.ProjetoExtensao"/>
         <mapping class="br.edu.ifpr.irati.modelo.Horario"/>
+        <mapping class="br.edu.ifpr.irati.modelo.Participacao"/>
+        <mapping class="br.edu.ifpr.irati.modelo.Usuario"/>
+        <mapping class="br.edu.ifpr.irati.modelo.ProjetoPesquisa"/>
     
     </session-factory>
 </hibernate-configuration>
