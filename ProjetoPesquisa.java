@@ -43,6 +43,33 @@ public class ProjetoPesquisa {
     @OneToMany
     private List<Participacao> participacoes;
     
+    public ProjetoPesquisa() { 
+    this.idProjetoPesquisa = 0;
+    this.numeroProcesso = "";
+    this.tituloProcesso = "";
+    this.previsaoConclusao = new Date();
+    this.instituicaoPesquisa = "";
+    }
+
+    public ProjetoPesquisa(int idProjetoPesquisa, String numeroProcesso, String tituloProcesso, Date previsaoConclusao, String instituicaoPesquisa) {
+        this.idProjetoPesquisa = idProjetoPesquisa;
+        this.numeroProcesso = numeroProcesso;
+        this.tituloProcesso = tituloProcesso;
+        this.previsaoConclusao = previsaoConclusao;
+        this.instituicaoPesquisa = instituicaoPesquisa;
+        this.horarios = new ArrayList<>();
+        this.participacoes = new ArrayList<>();
+    }
+
+    public ProjetoPesquisa(int idProjetoPesquisa, String numeroProcesso, String tituloProcesso, Date previsaoConclusao, String instituicaoPesquisa, List<Horario> horarios, List<Participacao> participacoes) {
+        this.idProjetoPesquisa = idProjetoPesquisa;
+        this.numeroProcesso = numeroProcesso;
+        this.tituloProcesso = tituloProcesso;
+        this.previsaoConclusao = previsaoConclusao;
+        this.instituicaoPesquisa = instituicaoPesquisa;
+        this.horarios = horarios;
+        this.participacoes = participacoes;
+    }
     public int getIdProjetoPesquisa() {
         return idProjetoPesquisa;
     }
