@@ -20,6 +20,18 @@ public class LoginMB {
     private String usuario;
     private String senha;
 
+    public LoginMB() {
+        usuario = "";
+        senha = "";
+        
+    }
+
+    public boolean verificarLogin(String email, String senha) throws HashGenerationException{
+        
+    }
+    public void efetuarLogin(){
+        
+    }
     /**
      * @return the usuario
      */
