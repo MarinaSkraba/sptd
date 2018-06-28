@@ -19,7 +19,8 @@ import javax.persistence.TemporalType;
  *
  * @author Marina
  */
-public class ProjetoPesquisa {
+@Entity(name= "projetopesquisa")
+public class ProjetoPesquisa implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
