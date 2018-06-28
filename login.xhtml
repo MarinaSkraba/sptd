@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    </h:head>
+    <h:body style="background-color: F0F0F0; background-image:url(img/floresta.jpeg)">
+        <div id="conteiner">
+            <div id="loginForm">
+                <h:form>
+                    <h:outputLabel value="S" 
+                                   styleClass="logoImg"
+                                   style="color: #1AB5D9"/>
+                    <h:outputLabel value="PTD" 
+                                   styleClass="logoImg"/>
+                    <br/>
+                    <br/>
+                    <h:panelGrid id="grid" columns="2" cellpadding="2">
+                        <h:outputLabel for="name" 
+                                       value="Nome:" 
+                                       styleClass="text"/>
+                        <p:inputText id="name" 
+                                     value="#{loginMB.usuario}" 
+                                     required="true"
+                                     styleClass="caixaTexto">
+                            <f:validateLength minimum="2" maximum="5" />
+                            <p:clientValidator />
+                        </p:inputText>
+
+                        <h:outputLabel for="senha" 
+                                       value="Senha:" 
+                                       styleClass="text"/>
+                        <p:password id="senha" 
+                                    value="#{loginMB.senha}" 
+                                    required="true"
+                                    styleClass="caixaTexto"/>
+                    </h:panelGrid>
+                    <br/>
+                    <p:commandButton value="Acessar" 
+                                     ajax="false" 
+                                     validateClient="true"
+                                     styleClass="botaoLogin"/>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;  	
+    padding: 0;
+    text-align: center;
+}
+background-image{
+    opacity:0.65;
+}
+.text{
+    color: black; 
+    font-size: larger; 
+    font-family: calibri, sans-serif;
+}
+#barraMenu{
+    margin: 0;  	
+    padding: 0; 
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(to right, #1FD6F6, #1AB5D9);
+}
+#barraMenu{
+    margin: 0;  	
+    padding: 0; 
+    width: 100%;
+    height: 60px;
+    background-image: linear-gradient(to right, #1FD6F6, #1AB5D9);
+}
+#usuarioLogado{
+    float: right;
+    margin: 0;  	
+    padding: 0;
+    width: 200px;
+    height: 60px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+#usuarioLogado:hover{
+    background-color: #179DBD;
+}
+#opMenu{
+    margin: 0;  	
+    padding: 0;
+    width: 50px;
+    height: 60px;
+    float: right;
+    transition: background-color 0.3s;
+}
+#opMenu:hover{
+    background-color: #179DBD;
+}
+#content{
+    margin: 20px 0px 0px 2.5%;  	
+    padding: 0;
+    height: 85%;
+    width: 95%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    /*
+    box-shadow: inset 0 2px 3px 0 rgba(255,255,255,.3), inset 0 -3px 6px 0 rgba(0,0,0,.2), 0 3px 2px 0 rgba(0,0,0,.2);
+    */
+}
+#conteiner{
+    height: 100%;
+    width: 100%;
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#botao{
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background-color: #1AB5D9;
+    transition: background-color 0.3s;
+}
+#botao:hover{
+    background-color: #1FD6F6;
+    
+}
+.logoImg{
+    font-size: xx-large;
+    font-family: blippo, fantasy;
+    font-weight: bold;
+}
+#loginForm{
+    height: 400px;
+    width: 400px;
+    border-radius: 500px;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;
+}
+.botaoLogin{
+    color: white;
+    font-size: larger; 
+    font-family: calibri, sans-serif;
+    font-weight: normal;
+    margin-right:10px;
+    border-radius: 5px;
+    border-color: #F0F0F0;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    background-image: linear-gradient(to right, #1AB5D9, #1AB5D9);
+}
+.botaoLogin:hover{
+    color: #1AB5D9;
+    border-color: #1AB5D9;
+    background-image: linear-gradient(to right, white, white);
+    /*
+    box-shadow: inset 0 -3px 6px 0 rgba(0,0,0,0.2);
+    */
+}
+.caixaTexto{
+    width: 150px;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
