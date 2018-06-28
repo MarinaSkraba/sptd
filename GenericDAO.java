@@ -1,7 +1,4 @@
 package br.edu.ifpr.irati.dao;
-
-
-;
 import br.edu.ifpr.irati.util.HibernateUtil;
 import java.io.Serializable;
 import java.util.List;
