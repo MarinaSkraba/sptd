@@ -7,7 +7,6 @@ package br.edu.ifpr.irati.dao;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.criteria.Order;
 
 public interface Dao<T> {
 
