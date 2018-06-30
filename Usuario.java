@@ -17,6 +17,7 @@ import javax.persistence.Id;
  * @author Marina
  */
 @Entity(name = "usuario")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario implements Serializable {
 
     @Id
