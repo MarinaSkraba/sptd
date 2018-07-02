@@ -70,9 +70,9 @@ public class GenericDAO<T> implements Dao<T> {
     }
 
     @Override
-    public T verificarUsuario(String user, String senha) {
+    public T verificarUsuario(String email, String senhaAlfanumerica) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        T t = (T) session.load(user, senha);
+        T t = (T) session.load(email, senhaAlfanumerica);
         session.clear();
         session.close();
         return t;
