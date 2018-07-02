@@ -20,7 +20,7 @@
                                        value="Email:" 
                                        styleClass="text"/>
                         <p:inputText id="name" 
-                                     value="#{loginMB.usuario}" 
+                                     value="#{loginMB.usuario.email}" 
                                      required="true"
                                      styleClass="caixaTexto">
                             <f:validateLength minimum="2" />
@@ -31,7 +31,7 @@
                                        value="Senha:" 
                                        styleClass="text"/>
                         <p:password id="senha" 
-                                    value="#{loginMB.senha}" 
+                                    value="#{loginMB.usuario.senhaAlfanumerica}" 
                                     required="true"
                                     styleClass="caixaTexto"/>
                     </h:panelGrid>
