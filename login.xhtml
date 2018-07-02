@@ -8,26 +8,22 @@
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="css/css.css"/>
     </h:head>
-    <h:body style="background-color: F0F0F0; background-image:url(img/floresta.jpeg)">
+    <h:body styleClass="bodyLogin">
         <div id="conteiner">
             <div id="loginForm">
                 <h:form>
-                    <h:outputLabel value="S" 
-                                   styleClass="logoImg"
-                                   style="color: #1AB5D9"/>
-                    <h:outputLabel value="PTD" 
-                                   styleClass="logoImg"/>
-                    <br/>
-                    <br/>
-                    <h:panelGrid id="grid" columns="2" cellpadding="2">
-                        <h:outputLabel for="name" 
-                                       value="Nome:" 
+                    <h:outputLabel value="LOGIN" 
+                                   styleClass="text"
+                                   style="font-size: 20pt"/>
+                    <h:panelGrid id="grid" columns="2" cellpadding="2" style="border-">
+                        <h:outputLabel for="email" 
+                                       value="Email:" 
                                        styleClass="text"/>
                         <p:inputText id="name" 
                                      value="#{loginMB.usuario}" 
                                      required="true"
                                      styleClass="caixaTexto">
-                            <f:validateLength minimum="2" maximum="5" />
+                            <f:validateLength minimum="2" />
                             <p:clientValidator />
                         </p:inputText>
 
