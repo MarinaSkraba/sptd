@@ -6,11 +6,14 @@
 package br.edu.ifpr.irati.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity(name = "curso")
 public class Curso implements Serializable {
@@ -22,14 +25,19 @@ public class Curso implements Serializable {
     @Column(name = "matriculaSIAPE", nullable = false, length = 200)
     private String matriculaSIAPE;
 
+    @OneToMany(mappedBy = "curso")
+    private List<Aula> aulas;
+
     public Curso() {
         this.idUsuario = 0;
         this.matriculaSIAPE = "";
+        this.aulas = new ArrayList<>();
     }
 
-    public Curso(int idUsuario, String matriculaSIAPE) {
+    public Curso(int idUsuario, String matriculaSIAPE, List<Aula> aulas) {
         this.idUsuario = idUsuario;
         this.matriculaSIAPE = matriculaSIAPE;
+        this.aulas = aulas;
     }
 
     public int getIdUsuario() {
@@ -46,6 +54,14 @@ public class Curso implements Serializable {
 
     public void setMatriculaSIAPE(String matriculaSIAPE) {
         this.matriculaSIAPE = matriculaSIAPE;
+    }
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(List<Aula> aulas) {
+        this.aulas = aulas;
     }
 
 }
