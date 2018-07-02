@@ -34,7 +34,6 @@ public class LoginMB {
         usuario = usuarioDao.verificarUsuario(usuario.getEmail(), senhaSHA512);
         System.out.println("Chegou object");
         System.out.println(usuario);
-
         efetuarLogin(usuario);
     }
 
