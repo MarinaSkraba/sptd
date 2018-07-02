@@ -18,6 +18,7 @@
         <mapping class="br.edu.ifpr.irati.modelo.ProjetoPesquisa"/>
         <mapping class="br.edu.ifpr.irati.modelo.Curso"/>
         <mapping class="br.edu.ifpr.irati.modelo.OutroTipoAtividade"/>
+        <mapping class="br.edu.ifpr.irati.modelo.Aula"/>
     
     </session-factory>
 </hibernate-configuration>
