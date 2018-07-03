@@ -1,5 +1,5 @@
 package br.edu.ifpr.irati.modelo;
-
+ooooooooiiiiiiii
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
