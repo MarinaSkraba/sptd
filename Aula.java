@@ -1,5 +1,5 @@
 package br.edu.ifpr.irati.modelo;
-ooooooooiiiiiiii
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity(name = "aula")
 public class Aula implements Serializable {
@@ -19,7 +20,7 @@ public class Aula implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idAula;
 
-    @Column(name = "componenteCurricular", nullable = false, length = 150)
+    @Column(name = "componenteCurricular", nullable = false, length = 20)
     private String componenteCurricular;
 
     @OneToMany
@@ -29,18 +30,23 @@ public class Aula implements Serializable {
     @JoinColumn(name = "curso_idCurso")
     private Curso curso;
 
+    @OneToOne
+    private TipoOferta tipoOferta;
+
     public Aula() {
         this.idAula = 0;
         this.componenteCurricular = "";
         this.horarios = new ArrayList<>();
         this.curso = new Curso();
+        this.tipoOferta = new TipoOferta();
     }
 
-    public Aula(int idAula, String componenteCurricular, List<Horario> horarios, Curso curso) {
+    public Aula(int idAula, String componenteCurricular, List<Horario> horarios, Curso curso, TipoOferta tipoOferta) {
         this.idAula = idAula;
         this.componenteCurricular = componenteCurricular;
         this.horarios = horarios;
         this.curso = curso;
+        this.tipoOferta = tipoOferta;
     }
 
     public int getIdAula() {
@@ -73,6 +79,14 @@ public class Aula implements Serializable {
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+    }
+
+    public TipoOferta getTipoOferta() {
+        return tipoOferta;
+    }
+
+    public void setTipoOferta(TipoOferta tipoOferta) {
+        this.tipoOferta = tipoOferta;
     }
 
 }
