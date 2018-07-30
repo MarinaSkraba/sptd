@@ -14,43 +14,73 @@ body{
     color: #1AB5D9;
     font-size: larger; 
     font-family: calibri, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #barraMenu{
     margin: 0;  	
     padding: 0; 
     width: 100%;
     height: 60px;
-    background-image: linear-gradient(to right, #1FD6F6, #1AB5D9);
+    background-image: linear-gradient(to right, #1AB5D9, #179DBD);
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,.1);
 }
-#barraMenu{
-    margin: 0;  	
-    padding: 0; 
-    width: 100%;
-    height: 60px;
-    background-image: linear-gradient(to right, #1FD6F6, #1AB5D9);
+#menuBarra{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #usuarioLogado{
     float: right;
     margin: 0;  	
     padding: 0;
     width: 200px;
-    height: 60px;
+    height: auto;
     transition: background-color 0.3s;
 }
 #usuarioLogado:hover{
-    background-color: #179DBD;
+    background-color: #1785ad;
 }
-#opMenu{
-    margin: 0;  	
-    padding: 0;
-    width: 50px;
-    height: 60px;
+op1{
+    color: black;
+    font-weight: normal;
+    font-size: small; 
+    font-family: calibri, sans-serif;
+    background-color: transparent;
+    background-image: none;
+    border-style: none;
+    transition: background-color 0.3s;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+.opMenu{
+    margin: 10px;  	
+    padding: 0px ;
+    width: auto;
+    height: 40px;
     float: right;
     transition: background-color 0.3s;
+    color: white;
+    font-weight: normal;
+    font-size: large; 
+    font-family: calibri, sans-serif;
+    background-color: transparent;
+    background-image: none;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
-#opMenu:hover{
-    background-color: #179DBD;
+.opMenu:hover{
+    background-color: #1785ad;
+    box-shadow: 0 rgba(0,0,0,0);
+    border-style: none;
+    border-width: thin;
+    border-color: white;
+    border-top-color: transparent;
+    font-weight: normal;
 }
 #content{
     margin: 20px 0px 0px 2.5%;  	
@@ -117,8 +147,13 @@ body{
     */
 }
 .caixaTexto{
-    width: 150px;
-    border-radius: 10px;
-    padding: 5px 5px 5px 5px;
+    width: 200px;
+    padding: 3px 3px 3px 3px;
     box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+}
+.caixaTexto:focus{
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0);
 }
