@@ -12,9 +12,11 @@
         <div id="conteiner">
             <div id="loginForm">
                 <h:form>
-                    <h:outputLabel value="LOGIN" 
+                    <h:outputLabel value="SPTD" 
                                    styleClass="text"
-                                   style="font-size: 20pt"/>
+                                   style="font-size: 50pt"/>
+                    <br/>
+                    <br/>
                     <h:panelGrid id="grid" columns="2" cellpadding="2" style="border-">
                         <h:outputLabel for="email" 
                                        value="Email:" 
@@ -39,7 +41,8 @@
                     <p:commandButton value="Acessar" 
                                      ajax="false" 
                                      validateClient="true"
-                                     styleClass="botaoLogin"/>
+                                     styleClass="botaoLogin"
+                                     action="#{loginMB.verificarLogin()}"/>
                 </h:form>
             </div>
         </div>
